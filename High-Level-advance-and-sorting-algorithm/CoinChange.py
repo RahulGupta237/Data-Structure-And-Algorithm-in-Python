@@ -20,4 +20,4 @@ def coinChange(totalNumber, coins):
             break
 
 coins = [1,2,5,20,50,100]
-coinChange(800, coins)
+coinChange(80, coins)

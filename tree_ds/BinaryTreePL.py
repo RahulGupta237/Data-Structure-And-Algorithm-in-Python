@@ -6,14 +6,17 @@ class BinaryTree:
         self.customList = size * [None]
         self.lastUsedIndex = 0
         self.maxSize = size
+        print(self.customList)
     
     def insertNode(self, value):
         if self.lastUsedIndex + 1 == self.maxSize:
             return "The Binary Tree is full"
         self.customList[self.lastUsedIndex+1] = value
         self.lastUsedIndex += 1
+    
+       
         return "The value has been successfully inserted"
-
+    
     def searchNode(self, nodeValue):
         for i in range(len(self.customList)):
             if self.customList[i] == nodeValue:
@@ -42,8 +45,12 @@ class BinaryTree:
         print(self.customList[index])
     
     def levelOrderTraversal(self, index):
-        for i in range(index, self.lastUsedIndex+1):
-            print(self.customList[i])
+        if self.customList is None:
+            print("no any value available")
+        else:
+            for i in range(index, self.lastUsedIndex+1):
+                
+                print(self.customList[i])
     
     def deleteNode(self, value):
         if self.lastUsedIndex == 0:

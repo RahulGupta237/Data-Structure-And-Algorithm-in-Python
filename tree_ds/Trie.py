@@ -70,5 +70,5 @@ def deleteString(root, word, index):
 newTrie = Trie()
 newTrie.insertString("App")
 newTrie.insertString("Appl")
-deleteString(newTrie.root, "App", 0)
+# deleteString(newTrie.root, "App", 0)
 print(newTrie.searchString("App"))

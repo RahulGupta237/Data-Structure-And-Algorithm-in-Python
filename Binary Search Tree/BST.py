@@ -1,7 +1,7 @@
 #   Created by Elshad Karimov 
 #   Copyright © 2020 AppMillers. All rights reserved.
 
-import realpython as queue
+import QueueLinkedList as queue
 
 class BSTNode:
     def __init__(self, data):
@@ -49,7 +49,7 @@ def levelOrderTraversal(rootNode):
     if not rootNode:
         return
     else:
-        customQueue = queue.MyQueue()
+        customQueue = queue.Queue()
         customQueue.enqueue(rootNode)
         while not(customQueue.isEmpty()):
             root = customQueue.dequeue()
@@ -123,8 +123,6 @@ insertNode(newBST,80)
 insertNode(newBST,100)
 insertNode(newBST,20)
 insertNode(newBST,40)
-# print(deleteBST(newBST))
+print(deleteBST(newBST))
 levelOrderTraversal(newBST)
-print("ghhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
-preOrderTraversal(newBST)
 

@@ -119,7 +119,7 @@ inserNode(newHeap, 4, "Max")
 inserNode(newHeap, 5, "Max")
 inserNode(newHeap, 2, "Max")
 inserNode(newHeap, 1, "Max")
-deleteEntireBP(newHeap)
+# deleteEntireBP(newHeap)
 levelOrderTraversal(newHeap)
 
 

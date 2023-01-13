@@ -13,10 +13,10 @@ class Graph:
     def bfs(self, vertex):
         visited = [vertex]
         queue = [vertex]
-        while queue:
+        while queue:#O(V) v is number of vertex
             deVertex = queue.pop(0)
             print(deVertex)
-            for adjacentVertex in self.gdict[deVertex]:
+            for adjacentVertex in self.gdict[deVertex]:  # O(E) E is number of edge
                 if adjacentVertex not in visited:
                     visited.append(adjacentVertex)
                     queue.append(adjacentVertex)
@@ -46,5 +46,15 @@ customDict = { "a" : ["b","c"],
 
 
 g = Graph(customDict)
+
+print("Breath First Search Algorithm using Queue FIFO")
 g.bfs("a")
 
+print("Depth First Search Algorithm using Stack LIFO")
+g.dfs("a")
+
+"""
+
+Time complexity of BFS AND DFS are O(V+E)
+
+"""

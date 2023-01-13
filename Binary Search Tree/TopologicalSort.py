@@ -44,4 +44,3 @@ customGraph.addEdge("B", "C")
 customGraph.addEdge("D", "F")
 
 customGraph.topologicalSort()
-print(customGraph.graph)

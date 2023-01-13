@@ -3,6 +3,9 @@
 
 from collections import defaultdict
 
+dict1={'A': ['C'], 'C': ['E'], 'E': ['H', 'F'], 'F': ['G'], 'B': ['D', 'C'], 'D': ['F'], 'H': [], 'G': []}
+Graph=defaultdict(list)
+print(Graph) # please learn collection module in python
 class Graph:
     def __init__(self, numberofVertices):
         self.graph = defaultdict(list)
@@ -26,6 +29,7 @@ class Graph:
         stack = []
 
         for k in list(self.graph):
+            print(f"learning default list {k}")
             if k not in visited:
                 self.topogologicalSortUtil(k, visited, stack)
         
@@ -45,3 +49,8 @@ customGraph.addEdge("D", "F")
 
 customGraph.topologicalSort()
 print(customGraph.graph)
+
+print("")
+"""
+time complexity and space O(V+E)
+"""
